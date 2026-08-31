@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IA Consciente</title>
+        <link rel="stylesheet" href="style.css">
+    </head>  
+    <body>
+        <header>
+            <h1>IA Consciente</h1>
+            <h2>Você sabe usar Inteligência Artificial com segurança?</h2>
+            <p>Aprenda o que é Inteligência Artificial, seus beneficios, riscos e como utilizá-la de forma consciente.</p>
+        </header>
+        <section>
+            <h2>O que é Inteligência Artificial?</h2>
+            <p> A Inteligência Artificial (IA) é uma tecnologia que utiliza
+                algoritmos e dados para realizar determinadas tarefas.
+                Ela não pensa como um ser humano. O sistema trabalha com
+                cálculos, números e padrões para analisar informações
+                e produzir resultados.
+            </p>
+        </section>
+        <section>
+            <h2>Como a Inteligência Artificial funciona?</h2>
+            <p>
+                A Inteligência Artificial analisa dados e identifica padrões.
+                Em sistemas que trabalham com textos, as informações podem
+                ser divididas em pequenas partes chamadas tokens.
+            </p>
+        
+            <p>
+                De forma simplificada, o processo funciona assim:
+            </p>
+
+            <p>
+                Texto → Tokens → Números → Padrões → Resposta
+            </p>
+        </section>
+        <section>
+            <h2>Onde encontramos IA no dia a dia?</h2>
+            <p>A Inteligência Artificial já está presente em diversas
+                situações do nosso cotidiano.
+            </p>
+
+            <ul>
+                <li>Assistentes virtuais, como a Alexa</li>
+                <li>GPS e aplicativos de mapas</li>
+                <li>Alguns carros e sistemas de assistência ao motorista</li>
+                <li>Aparelhos eletrônicos inteligentes</li>
+                <li>Ferramentas como ChatGPT, Gemini e Claude</li>
+            </ul>
+        </section>
+        <section>
+            <h2>
+                Benefícios da Inteligência Artificial
+            </h2>
+            <p> A Inteligência Artificial pode facilitar diversas atividades
+                do cotidiano e ajudar as pessoas em diferentes situações.
+            </p>
+
+            <ul>
+                <li>Auxiliar na organização de horários e lembretes</li>
+                <li>Ajudar no aprendizado e nos estudos</li>
+                <li>Fornecer informações de localização e rotas</li>
+                <li>Auxiliar na busca rápida por informações</li>
+                <li>Ajudar na realização de tarefas do cotidiano</li>
+            </ul>
+            <p>Apesar dessas facilidades, informações importantes devem
+                ser verificadas em fontes confiáveis, pois a IA também
+                pode apresentar respostas incorretas.
+            </p>
+        </section>
+        <section>
+            <h2>Riscos da Inteligência Artificial</h2>
+
+            <p>A Inteligência Artificial traz muitos benefícios, mas também
+                apresenta riscos quando utilizada sem cuidado.
+            </p>
+            <ul>
+                <li>Gerar informações incorretas ou falsas</li>
+                <li>Facilitar a divulgação de fake news</li>
+                <li>Criar imagens, vídeos e áudios que parecem reais</li>
+                <li>Expor dados pessoais quando utilizados sem cuidado</li>
+                <li>Levar pessoas a acreditar em respostas sem verificar a informação</li>
+
+            </ul>
+
+            <p> Por isso, não devemos acreditar automaticamente em tudo que
+                uma Inteligência Artificial produz. Informações importantes
+                devem ser verificadas em fontes confiáveis.
+            </p>
+        </section>
+        <section>
+            <h2>Como usar a Inteligência Artificial com segurança?</h2>
+            <p>A Inteligência Artificial deve ser utilizada como uma
+                ferramenta de apoio. O usuário continua sendo responsável
+                por analisar as informações e decidir como utilizá-las.
+            </p>
+        
+
+            <ul>
+                <li>Leia e analise as respostas geradas pela IA</li>
+                <li>Verifique informações importantes em fontes confiáveis</li>
+                <li>Evite compartilhar dados pessoais e informações privadas</li>
+                <li>Não utilize IA para enganar ou prejudicar outras pessoas</li>
+                <li>Desconfie de imagens, vídeos e áudios suspeitos</li>
+
+            </ul>
+        </section>
+
+        <section>
+            <h2> Teste seus conhecimentos🤔</h2>
+            <p>1. A Inteligência Artificial pensa como um ser humano?</p>
+            <button onclick="responderErrado()">Sim</button>
+            <button onclick="responderCerto()">Não</button>
+            <p id="resultado"></p>
+        </section>
+        <section>
+            <p>2. Tudo que uma Inteligência Artificial responde é verdadeiro?</p>
+
+            <button onclick="responderErrado2()">Sim</button>
+            <button onclick="responderCerto2()">Não</button>
+
+            <p id="resultado2"></p>
+        </section>
+
+        <section>
+            <p>3.É seguro colocar senhas, documentos e
+                 dados pessoais em qualquer ferramenta de IA? </p>
+            <button onclick="responderErrado3()">Sim</button>
+            <button onclick="responderCerto3()">Não</button>
+
+            <p id="resultado3"></p>
+        </section>
+
+
+        <section>
+            <p>4. Uma imagem criada por IA pode parecer verdadeira mesmo sendo falsa?</p>
+
+            <button onclick="responderCerto4()">Sim</button>
+            <button onclick="responderErrado4()">Não</button>
+
+            <p id="resultado4"></p>
+        </section>
+
+        <section>
+            <p>5.Antes de compartilhar uma informação dada pela IA, devemos verificá-la em uma fonte confiável? </p>
+            <button onclick="responderCerto5()">Sim</button>
+            <button onclick="responderErrado5()">Não</button>
+
+            <p id="resultado5"></p>
+        </section>
+
+        <script>
+            let acertos =0;
+            let pergunta1Respondida = false;
+            let pergunta2Respondida = false;
+            let pergunta3Respondida = false;
+            let pergunta4Respondida = false;
+            let pergunta5Respondida = false;
+
+
+            function responderCerto(){
+                document.getElementById("resultado").innerText="✅ Correto! A IA não pensa como um ser humano.";
+                if (pergunta1Respondida == false) {
+                    acertos = acertos + 1;
+                    document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                    pergunta1Respondida = true;
+                }
+            }
+            
+            function responderErrado(){
+                document.getElementById("resultado").innerText="❌ Não é bem assim. A IA trabalha com dados, cálculos e padrões.";
+                pergunta1Respondida = true;
+            }
+
+            function responderCerto2(){
+                document.getElementById("resultado2").innerText="✅ Correto! A IA pode trazer respostas erradas.";
+                if (pergunta2Respondida==false) {
+                    acertos = acertos +1;
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                    pergunta2Respondida = true;
+                }
+
+            }
+
+            function responderErrado2(){
+                document.getElementById("resultado2").innerText="❌ Errado! A IA pode trazer informações erradas.";
+                pergunta2Respondida = true;
+            
+            }
+
+            
+            function responderCerto3(){
+                document.getElementById("resultado3").innerText="✅ Correto! Devemos ter cuidado ao compartilhar dados pessoais e informações privadas com ferramentas de IA.";
+                if (pergunta3Respondida==false) {
+                    acertos = acertos +1;
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                    pergunta3Respondida = true;
+                }
+            }
+
+            function responderErrado3(){
+                document.getElementById("resultado3").innerText="❌ Errado! Dados pessoais, senhas e informações privadas não devem  ser compartilhados sem saber como serão utilizados e protegidos.";
+                pergunta3Respondida = true;
+            }
+               
+
+            function responderCerto4(){
+                document.getElementById("resultado4").innerText="✅ Correto! Imagens criadas por IA podem parecer muito reais e enganar as pessoas.";
+                if (pergunta4Respondida==false) {
+                    acertos = acertos +1;
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                    pergunta4Respondida = true;
+                }
+
+            }
+            function responderErrado4(){
+                document.getElementById("resultado4").innerText="❌ Errado! A IA pode criar imagens que parecem reais, mesmo que a situação nunca tenha acontecido.";
+                pergunta4Respondida= true;
+            }
+            
+            function responderCerto5(){
+                document.getElementById("resultado5").innerText="✅ Correto! A IA pode apresentar informações incorretas, por isso é importante verificar antes de compartilhar.";
+                if (pergunta5Respondida==false) {
+                    acertos = acertos +1;
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                    pergunta5Respondida = true;
+                    mostrarResultado();
+                    
+                    if (acertos == 5) {
+                         document.getElementById("mensagemFinal").innerText =
+                        "🎉 Excelente! Você demonstrou que compreendeu como utilizar a IA de forma consciente e segura.";
+                    }
+                }
+                
+            }
+
+            function responderErrado5(){
+                document.getElementById("resultado5").innerText="❌ Errado! Informações importantes devem ser verificadas em fontes confiáveis antes de serem compartilhadas.";
+                pergunta5Respondida= true;
+                 mostrarResultado();
+            }
+            
+
+            function mostrarResultado(){
+                if (acertos ==5){
+                    document.getElementById("mensagemFinal").innerText =
+                    "🎉 Excelente! Você demonstrou que compreendeu como utilizar a IA de forma consciente e segura.";
+                } else if (acertos >=3) {
+                    document.getElementById("mensagemFinal").innerText =
+                    "👍 Muito bem! Você entendeu boa parte do conteúdo. Continue atento ao uso consciente da IA.";
+                } else {
+                    document.getElementById("mensagemFinal").innerText =
+                    "📚 Vale revisar o conteúdo e tentar novamente. Usar IA com segurança exige atenção.";
+                }
+            }
+
+                
+            
+
+      
+        
+            function feedbackSim() {
+                document.getElementById("feedback").innerText =
+                "✅ Obrigado pelo feedback! Continue usando a IA de forma consciente e segura.";
+            }
+
+            function feedbackDuvida() {
+                document.getElementById("feedback").innerText =
+                "📚 Obrigado pelo feedback! Reveja o conteúdo sempre que precisar.";
+            }
+        
+        
+        
+        
+        
+        
+        </script>
+        <p id="pontuacao">Pontuação final: 0 de 5 acertos</p>
+        <p id="mensagemFinal"></p>
+
+        <section>
+            <h2>💬 Seu feedback</h2>
+            <p>Depois deste contéudo você se sente mais preparado  
+                para usar Inteligência Artificial de forma consciente e segura?
+            </p>
+
+            <button onclick="feedbackSim()">Sim</button>
+            <button onclick="feedbackDuvida()">Ainda tenho dúvidas</button>
+            <p id="feedback"></p>
+        </section>
+
+        <footer>
+            <p>🤖 IA Consciente</p>
+            <p>Projeto de Letramento Digital</p>
+            <p>Uso Consciente e Seguro da Inteligência Artificial</p>
+        </footer>
+
+
+
+    </body>
+
+</html>
