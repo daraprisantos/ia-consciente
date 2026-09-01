@@ -6,7 +6,7 @@
     </head>  
     <body>
         <header>
-            <h1>IA Consciente</h1>
+            <h1>🤖IA Consciente</h1>
             <h2>Você sabe usar Inteligência Artificial com segurança?</h2>
             <p>Aprenda o que é Inteligência Artificial, seus beneficios, riscos e como utilizá-la de forma consciente.</p>
         </header>
@@ -108,7 +108,7 @@
         </section>
 
         <section>
-            <h2> Teste seus conhecimentos🤔</h2>
+            <h2> Teste seus conhecimentos</h2>
             <p>1. A Inteligência Artificial pensa como um ser humano?</p>
             <button onclick="responderErrado()">Sim</button>
             <button onclick="responderCerto()">Não</button>
@@ -149,7 +149,34 @@
 
             <p id="resultado5"></p>
         </section>
+        <section>
+            <h2>Real ou criada por IA?</h2>
 
+            <p>
+                Observe as duas imagens com atenção.
+                Uma delas é uma fotografia real e a outra foi criada por Inteligência Artificial.
+                Você consegue descobrir qual foi criada por IA?
+            </p>
+        <div class="comparacao-imagens">
+
+            <div class="imagem-opcao">
+                <h3>Imagem A</h3>
+                <img src="imagens/foto-real.jpg" alt="Imagem A">
+            </div>
+
+            <div class="imagem-opcao">
+                <h3>Imagem B</h3>
+                <img src="imagens/foto-ia.png" alt="Imagem B">
+            </div>
+
+        </div>
+            <p>6.Qual imagem foi criada por Inteligência Artificial?</p>
+
+            <button onclick="responderErrado6()">Imagem A</button>
+            <button onclick="responderCerto6()">Imagem B</button>
+
+            <p id="resultado6"></p>
+        </section>
         <script>
             let acertos =0;
             let pergunta1Respondida = false;
@@ -157,13 +184,14 @@
             let pergunta3Respondida = false;
             let pergunta4Respondida = false;
             let pergunta5Respondida = false;
+            let pergunta6Respondida = false;
 
 
             function responderCerto(){
                 document.getElementById("resultado").innerText="✅ Correto! A IA não pensa como um ser humano.";
                 if (pergunta1Respondida == false) {
                     acertos = acertos + 1;
-                    document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                    document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 6 acertos";
                     pergunta1Respondida = true;
                 }
             }
@@ -177,7 +205,7 @@
                 document.getElementById("resultado2").innerText="✅ Correto! A IA pode trazer respostas erradas.";
                 if (pergunta2Respondida==false) {
                     acertos = acertos +1;
-                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 6 acertos";
                     pergunta2Respondida = true;
                 }
 
@@ -194,7 +222,7 @@
                 document.getElementById("resultado3").innerText="✅ Correto! Devemos ter cuidado ao compartilhar dados pessoais e informações privadas com ferramentas de IA.";
                 if (pergunta3Respondida==false) {
                     acertos = acertos +1;
-                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 6 acertos";
                     pergunta3Respondida = true;
                 }
             }
@@ -209,7 +237,7 @@
                 document.getElementById("resultado4").innerText="✅ Correto! Imagens criadas por IA podem parecer muito reais e enganar as pessoas.";
                 if (pergunta4Respondida==false) {
                     acertos = acertos +1;
-                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 6 acertos";
                     pergunta4Respondida = true;
                 }
 
@@ -223,14 +251,9 @@
                 document.getElementById("resultado5").innerText="✅ Correto! A IA pode apresentar informações incorretas, por isso é importante verificar antes de compartilhar.";
                 if (pergunta5Respondida==false) {
                     acertos = acertos +1;
-                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 5 acertos";
+                   document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 6 acertos";
                     pergunta5Respondida = true;
                     mostrarResultado();
-                    
-                    if (acertos == 5) {
-                         document.getElementById("mensagemFinal").innerText =
-                        "🎉 Excelente! Você demonstrou que compreendeu como utilizar a IA de forma consciente e segura.";
-                    }
                 }
                 
             }
@@ -243,10 +266,10 @@
             
 
             function mostrarResultado(){
-                if (acertos ==5){
+                if (acertos ==6){
                     document.getElementById("mensagemFinal").innerText =
                     "🎉 Excelente! Você demonstrou que compreendeu como utilizar a IA de forma consciente e segura.";
-                } else if (acertos >=3) {
+                } else if (acertos >=4) {
                     document.getElementById("mensagemFinal").innerText =
                     "👍 Muito bem! Você entendeu boa parte do conteúdo. Continue atento ao uso consciente da IA.";
                 } else {
@@ -270,17 +293,40 @@
                 "📚 Obrigado pelo feedback! Reveja o conteúdo sempre que precisar.";
             }
         
-        
-        
+            function responderCerto6() {
+                document.getElementById("resultado6").innerText =
+                "✅ Correto! A Imagem B foi criada por Inteligência Artificial.";
+
+                if (pergunta6Respondida == false) {
+                    acertos = acertos + 1;
+                    document.getElementById("pontuacao").innerText = "Resultado final: " + acertos + " de 6 acertos";
+                    pergunta6Respondida = true;
+                
+                    if (acertos == 6) {
+                        document.getElementById("mensagemFinal").innerText =
+                        "🎉 Excelente! Você demonstrou que compreendeu como utilizar a IA de forma consciente e segura.";
+                    }
+                }        
+            }
+            function responderErrado6() {
+                document.getElementById("resultado6").innerText =
+                "❌ A Imagem B foi criada por IA. Nem sempre é fácil identificar apenas olhando. Por isso, é importante verificar a fonte e o contexto.";
+                pergunta6Respondida = true;
+            
+            }
+            
+            
+            
+           
         
         
         
         </script>
-        <p id="pontuacao">Pontuação final: 0 de 5 acertos</p>
+        <p id="pontuacao">Pontuação final: 0 de 6 acertos</p>
         <p id="mensagemFinal"></p>
 
         <section>
-            <h2>💬 Seu feedback</h2>
+            <h2> Seu feedback</h2>
             <p>Depois deste contéudo você se sente mais preparado  
                 para usar Inteligência Artificial de forma consciente e segura?
             </p>
